@@ -1,3 +1,6 @@
+import {destinations} from "../../static/destinations";
+import DestinationCard from "../../components/DestinationCard";
+
 const WorkCation = () => {
     return (
         <div className="bg-gray-100">
@@ -24,10 +27,10 @@ const WorkCation = () => {
                                className="base-btn blue-btn sm:text-base shadow-lg">
                                 Book your escape
                             </a>
-                            <a href="#"
-                               className="ml-2 base-btn gray-btn sm:text-base">
-                                Learn more
-                            </a>
+                            {/*<a href="#"*/}
+                            {/*   className="ml-2 base-btn gray-btn sm:text-base">*/}
+                            {/*    Learn more*/}
+                            {/*</a>*/}
                         </div>
                     </div>
                 </div>
@@ -37,6 +40,26 @@ const WorkCation = () => {
                         alt="Woman working on beach"
                         className="absolute inset-0 h-full w-full object-cover object-center"
                     />
+                </div>
+            </div>
+            <div className="max-w-md sm:max-w-xl lg:max-w-6xl mx-auto px-8 lg:px-12 py-8">
+                <h2 className="text-xl text-gray-900">Popular Destinations</h2>
+                <p className="text-gray-600">A selection of great work-friendly cities with lots to see and explore.</p>
+                <div className="flex flex-wrap -mx-4">
+
+                    {
+                        destinations.map(destination => (
+                            <div key={destination.city} className="mt-6 w-full px-4 lg:w-1/2 xl:w-1/3">
+                                <DestinationCard
+                                    city={destination.city}
+                                    averagePrice={destination.averagePrice}
+                                    propertyCount={destination.propertyCount}
+                                    imageUrl={destination.imageUrl}
+                                    imageAlt={destination.imageUrl}
+                                />
+                            </div>
+                        ))
+                    }
                 </div>
             </div>
         </div>
