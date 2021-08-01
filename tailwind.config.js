@@ -12,6 +12,9 @@ module.exports = {
       },
       fontFamily: {
         body: ['Inter', 'sans-serif']
+      },
+      spacing: {
+        '72': '18rem'
       }
     },
   },

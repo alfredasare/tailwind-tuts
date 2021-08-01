@@ -7,7 +7,7 @@ const WorkCation = () => {
             <div className="flex">
                 <div className="px-8 py-12 max-w-md mx-auto sm:max-w-xl lg:max-w-full lg:w-1/2 lg:py-24 lg:px-12 ">
                     <div className="xl:max-w-lg xl:ml-auto">
-                        <h1 className="text-2xl">Work<span className="text-indigo-500">cation</span></h1>
+                        <img className="h-10" src="/img/logo.svg" alt="Workcation" />
                         <img
                             src="https://img.freepik.com/free-photo/side-view-woman-working-laptop-beach_23-2148575227.jpg?size=626&ext=jpg"
                             alt="Woman working on beach"
