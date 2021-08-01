@@ -15,8 +15,11 @@ module.exports = {
       }
     },
   },
-  variants: {
-    extend: {},
+  variants: { // used to refer to hover, active, breakpoints
+    extend: {
+      backgroundColor: ['active'],
+      // fontSize: ['hover']    enable text scaling
+    },
   },
   plugins: [],
 }
